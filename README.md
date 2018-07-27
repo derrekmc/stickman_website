@@ -1,2 +1,3 @@
-# stickman_website
-one level stick man website
+# stickman_websit
+
+a [Sails](http://sailsjs.org) application
