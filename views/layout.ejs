@@ -29,10 +29,37 @@
     -->
 
     <!--STYLES-->
+    <link rel="stylesheet" href="/styles/importer.css">
     <!--STYLES END-->
+
+    <script src="js/swfobject.js"></script>
+    <script>
+      var flashvars = {
+      };
+      var params = {
+        menu: "false",
+        scale: "noScale",
+        allowFullscreen: "true",
+        allowScriptAccess: "always",
+        bgcolor: "",
+        wmode: "gpu" // can cause issues with FP settings & webcam
+      };
+      var attributes = {
+        id:"StickManMultiPlayer"
+      };
+      swfobject.embedSWF(
+        "StickManMultiPlayer.swf",
+        "altContent", "1200", "600", "10.0.0",
+        "expressInstall.swf",
+        flashvars, params, attributes);
+    </script>
+    <style>
+      html, body { height:100%; overflow:hidden; }
+      body { margin:0; }
+    </style>
   </head>
 
-  <body>
+  <body style="background-color:#000;">
     <%- body %>
 
 
@@ -59,6 +86,7 @@
     -->
 
     <!--TEMPLATES-->
+    
     <!--TEMPLATES END-->
 
 
@@ -86,6 +114,8 @@
     -->
 
     <!--SCRIPTS-->
+    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/swfobject.js"></script>
     <!--SCRIPTS END-->
   </body>
 </html>
