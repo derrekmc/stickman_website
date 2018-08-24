@@ -1,0 +1,8 @@
+.form-control{
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.form-control:read-only{
+  background-color: #000000;
+}

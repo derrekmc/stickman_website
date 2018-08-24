@@ -29,37 +29,31 @@
     -->
 
     <!--STYLES-->
+    <link rel="stylesheet" href="/styles/bootstrap.css">
     <link rel="stylesheet" href="/styles/importer.css">
+    <link rel="stylesheet" href="/styles/theme.css">
     <!--STYLES END-->
-
-    <script src="js/swfobject.js"></script>
     <script>
-      var flashvars = {
-      };
-      var params = {
-        menu: "false",
-        scale: "noScale",
-        allowFullscreen: "true",
-        allowScriptAccess: "always",
-        bgcolor: "",
-        wmode: "gpu" // can cause issues with FP settings & webcam
-      };
-      var attributes = {
-        id:"StickManMultiPlayer"
-      };
-      swfobject.embedSWF(
-        "StickManMultiPlayer.swf",
-        "altContent", "1200", "600", "10.0.0",
-        "expressInstall.swf",
-        flashvars, params, attributes);
+
+
+      var jsReady = false;
+      function isReady() {
+        return jsReady;
+      }
+
+      function pageInit() {
+        jsReady = true;
+        document.forms["form1"].output.value += "\n" + "JavaScript is ready.\n";
+      }
     </script>
+
     <style>
       html, body { height:100%; overflow:hidden; }
       body { margin:0; }
     </style>
   </head>
 
-  <body style="background-color:#000;">
+  <body style="background-color:#000;" onload="pageInit()">
     <%- body %>
 
 
@@ -115,7 +109,10 @@
 
     <!--SCRIPTS-->
     <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/jquery.min.js"></script>
     <script src="/js/swfobject.js"></script>
     <!--SCRIPTS END-->
+
+
   </body>
 </html>
