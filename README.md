@@ -1,3 +1,3 @@
-# stickman_websit
+# Stickman Website
 
-a [Sails](http://sailsjs.org) application
+A socket ready server
